@@ -1,3 +1,7 @@
+[[
+Takes a skype chatlog and makes it look "cleaner!"
+]]
+
 local dates = [[.%d+:%d+:%d+ PM. ]]
 local nameCap = "(.+):"
 local msgCap = [[:(.*)]]
