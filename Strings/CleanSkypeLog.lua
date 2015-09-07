@@ -1,4 +1,4 @@
-[[
+--[[
 Takes a skype chatlog and makes it look "cleaner!"
 ]]
 
