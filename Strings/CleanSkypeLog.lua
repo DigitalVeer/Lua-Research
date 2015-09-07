@@ -8,14 +8,14 @@ local msgCap = [[:(.*)]]
 local lineFeed = string.char(10)
 local singleLineComplement = "[^"..lineFeed.."]+"
 
-function getString(txt)
+function readLineAndFormat(txt)
 local str = txt
-local steve = txt:gsub(dates,"")
+local subbedMessage = txt:gsub(dates,"")
 local finalStr = "";
-for line in steve:gmatch(singleLineComplement) do
- local name = line:match(nameCap)
- local message = line:match(msgCap)
- finalStr = finalStr .. name ..  " | ".. tostring(message) .. string.char(10)
+for line in subbedMessage:gmatch(singleLine) do
+	local name = line:match(nameCap)
+	local message = line:match(msgCap)
+	finalStr = finalStr .. (name~=nil and name .. " | " or "") ..  (message~=nil and tostring(message) .. string.char(10) or "") 
 end
 return finalStr;
 end
