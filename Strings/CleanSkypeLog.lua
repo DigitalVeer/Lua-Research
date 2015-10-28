@@ -5,8 +5,7 @@ Takes a skype chatlog and makes it look "cleaner!"
 local dates = [[.%d+:%d+:%d+ PM. ]]
 local nameCap = "(.+):"
 local msgCap = [[:(.*)]]
-local lineFeed = string.char(10)
-local singleLineComplement = "[^"..lineFeed.."]+"
+local singleLineComplement = "[^\n]+"
 
 function readLineAndFormat(txt)
 local str = txt
