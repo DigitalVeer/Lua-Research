@@ -1,5 +1,5 @@
 --[[
-Takes a skype chatlog and makes it look "cleaner!"
+Takes a skype chatlog and makes it look cleaner and to the point
 ]]
 
 local dates = [[.%d+:%d+:%d+ PM. ]]
