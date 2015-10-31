@@ -5,7 +5,7 @@ local Player = require(modules.Player)
 local Developer = require(modules.Developer)
 local HighRank = require(modules.HighRank)
 
-local lF = string.char(10) .. "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+local lF =  "\n"..string.rep("~",20)
 
 local person = Player("YShaarj", 554415)
 person:print_data_items()
@@ -20,3 +20,5 @@ local dev = Developer("DigitalVeer", 3453521)
 dev:print_data_items()
 dev:add_data_field("Gender", "Male")
 print("Gender" , dev:get_gender(),lF)
+
+
