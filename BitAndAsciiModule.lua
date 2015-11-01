@@ -19,6 +19,14 @@ function misc.bitToDec(n)
 end
 
 function misc.decToBin(n)
+local placeValues = select(2,math.frexp(n))
+local str = "";
+for bitPlace=placeValues,1,-1 do
+     str=str..tostring(math.fmod(n,2)):match("^%d+")
+     n=(n-math.fmod(n,2))/2
+    end
+    return str
 end
+
 
 return misc
